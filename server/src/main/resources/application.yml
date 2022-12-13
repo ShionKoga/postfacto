@@ -1,0 +1,14 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${DATABASE_URL}/postfacto
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+
+  flyway:
+    locations: classpath:/db/migration
+    baseline-on-migrate: true
+
+logging:
+  level:
+    root: info
