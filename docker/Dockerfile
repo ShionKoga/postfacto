@@ -1,4 +1,5 @@
 FROM public.ecr.aws/bitnami/node:16 as webBuild
+ARG REACT_APP_SERVER_URL
 WORKDIR /tmp
 COPY ./web ./web
 WORKDIR /tmp/web
